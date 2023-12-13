@@ -1,0 +1,103 @@
+h2 {
+  display: list-item;
+  width: 100%;
+  color: #4f4f4f;
+  border-bottom: 3px solid #0076b6d9;
+}
+#sections-wrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+details {
+  margin-bottom: 1em;
+  width: 50%;
+  padding: 10px;
+}
+#agreement-section {
+  width: 100%;
+}
+summary {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+form {
+  width: 90%;
+  margin: 3em auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1em;
+}
+
+/* Material Design-inspired styling */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select,
+textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  width: calc(100% - 22px);
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+select {
+  appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23333' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px;
+}
+
+/* Non-editable agreement text */
+#waiversAgreements {
+  background-color: #f9f9f9;
+  border: none;
+  resize: none;
+  font-family: Arial, sans-serif;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 7px;
+  display: block;
+}
+
+.btn {
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.registration-btn {
+  background-color: #007bff;
+}
+.return-btn {
+  background-color: #f14d38;
+}
+.buttons-center {
+  text-align: center;
+}
+
+/* Adjust as needed for responsiveness */
+@media (max-width: 600px) {
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+  }
+}
