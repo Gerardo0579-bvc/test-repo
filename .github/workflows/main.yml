@@ -1,0 +1,24 @@
+name: Deploy to docker hub
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   
+   steps:
+   - uses: actions/checkout@v2
+   - name: docker login
+     env:
+       DOCKER_USER: ${{secrets.DOCKER_USERNAME}}
+       DOCKER_PASS: ${{secrets.DOCKER_PASS}}
+     run: |
+       docker login -u $DOCKER_USER -p $DOCKER_PASS
+   - name: Build docker image
+     run: docker build /app --file Dockerfile --tag gerardo0579bvc/test-repo:${{ github.sha}}
+
+   - name: Docker push
+     run: docker push gerardo0579bvc/test-repo:${{ github.sha }}
