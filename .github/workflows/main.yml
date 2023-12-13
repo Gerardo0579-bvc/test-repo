@@ -18,7 +18,7 @@ jobs:
      run: |
        docker login -u $DOCKER_USER -p $DOCKER_PASS
    - name: Build docker image
-     run: docker build /app --file Dockerfile --tag gerardo0579bvc/test-repo:${{ github.sha}}
+     run: docker build app --file Dockerfile --tag gerardo0579bvc/test-repo:${{ github.sha}}
 
    - name: Docker push
      run: docker push gerardo0579bvc/test-repo:${{ github.sha }}
