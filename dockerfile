@@ -2,4 +2,4 @@
 FROM httpd:2.4
 
 # Copy the custom index.html into the default Apache document root
-COPY app /usr/local/apache2/htdocs/
+COPY . /usr/local/apache2/htdocs/
